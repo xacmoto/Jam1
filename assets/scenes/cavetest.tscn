@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmu4d72qpunsm"]
+
+[ext_resource type="PackedScene" uid="uid://djnemc2xnn776" path="res://assets/models/meshs/cavetest.fbx" id="1_b8kkv"]
+[ext_resource type="Texture2D" uid="uid://dsgfuha5ru6j0" path="res://assets/models/textures/pebble_embedded_concrete_diff_4k.jpg" id="2_cdgqj"]
+[ext_resource type="Texture2D" uid="uid://dclb6hv8tbdny" path="res://assets/models/textures/pebble_embedded_concrete_nor_gl_4k.png" id="3_kicuy"]
+[ext_resource type="Texture2D" uid="uid://cbc4bnolrtatw" path="res://assets/models/textures/pebble_embedded_concrete_rough_4k.exr" id="4_v8k64"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eilp"]
+albedo_texture = ExtResource("2_cdgqj")
+roughness = 0.45
+roughness_texture = ExtResource("4_v8k64")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 1.74
+normal_texture = ExtResource("3_kicuy")
+ao_light_affect = 0.26
+subsurf_scatter_strength = 0.12
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kicuy"]
+albedo_color = Color(0.808998, 0.808998, 0.808998, 1)
+
+[node name="cavetest" instance=ExtResource("1_b8kkv")]
+
+[node name="CAVE" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8eilp")
+
+[node name="Cube_004" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_kicuy")

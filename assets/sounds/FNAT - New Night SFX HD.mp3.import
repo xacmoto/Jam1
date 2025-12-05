@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://div6u1hp2vcdf"
+path="res://.godot/imported/FNAT - New Night SFX HD.mp3-b0cd95d8b0199ecf21b03c8f1b67cd88.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/FNAT - New Night SFX HD.mp3"
+dest_files=["res://.godot/imported/FNAT - New Night SFX HD.mp3-b0cd95d8b0199ecf21b03c8f1b67cd88.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

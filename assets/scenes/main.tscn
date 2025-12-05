@@ -1,8 +1,65 @@
-[gd_scene load_steps=2 format=3 uid="uid://6l0to5h4ud4t"]
+[gd_scene load_steps=6 format=3 uid="uid://6l0to5h4ud4t"]
 
 [ext_resource type="Script" uid="uid://kd65teis1h17" path="res://assets/scenes/office_1.gd" id="1_mr7gh"]
+[ext_resource type="PackedScene" uid="uid://dmu4d72qpunsm" path="res://assets/scenes/cavetest.tscn" id="2_kpi06"]
+
+[sub_resource type="Environment" id="Environment_dfgan"]
+ambient_light_color = Color(0.00820202, 0.00820202, 0.00820202, 1)
+ambient_light_energy = 0.0
+tonemap_mode = 2
+tonemap_exposure = 2.3
+tonemap_white = 7.0
+ssr_enabled = true
+ssr_max_steps = 65
+ssao_intensity = 16.0
+ssil_enabled = true
+ssil_radius = 10.33
+ssil_intensity = 3.6
+ssil_sharpness = 1.0
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+glow_normalized = true
+glow_bloom = 0.06
+fog_enabled = true
+fog_light_color = Color(0.115035, 0.126067, 0.114093, 1)
+fog_light_energy = 2.35
+fog_density = 0.1299
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.14
+volumetric_fog_albedo = Color(0.288174, 0.206801, 0.154284, 1)
+adjustment_enabled = true
+adjustment_brightness = 0.57
+adjustment_contrast = 1.1
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_sfrgt"]
+dof_blur_far_enabled = true
+
+[sub_resource type="Compositor" id="Compositor_etxf0"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Office1" type="Node" parent="."]
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999467, 0, -0.0326494, 0, 1, 0, 0.0326494, 0, 0.999467, 0.152281, 1.32229, 0.665644)
+fov = 117.472
+
+[node name="cameraOffice" type="Node" parent="."]
 script = ExtResource("1_mr7gh")
+
+[node name="computerOffice" type="Node" parent="."]
+
+[node name="cavetest" parent="." instance=ExtResource("2_kpi06")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175921, -0.0698601, -0.0663764)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dfgan")
+camera_attributes = SubResource("CameraAttributesPractical_sfrgt")
+compositor = SubResource("Compositor_etxf0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858319, 1.70405, 0)
+light_color = Color(0.770753, 0.687516, 0.559927, 1)
+light_energy = 0.864
+light_indirect_energy = 4.494
+light_size = 0.225
+shadow_enabled = true

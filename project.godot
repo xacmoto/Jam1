@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="Jam FiveNightsAtTigers MEMORY LEAK"
-config/description="ONe of the scariest
+config/description="ONe of the scariest freakeing games
 "
-config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="uid://6l0to5h4ud4t"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="uid://cma8w6fieoqg0"
 
 [autoload]
 

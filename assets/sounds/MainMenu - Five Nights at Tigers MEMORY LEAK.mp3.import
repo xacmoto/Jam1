@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpfup4sujoyil"
+path="res://.godot/imported/MainMenu - Five Nights at Tigers MEMORY LEAK.mp3-671119e40e032dcbd9e6ca6d0fb1f1d4.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/MainMenu - Five Nights at Tigers MEMORY LEAK.mp3"
+dest_files=["res://.godot/imported/MainMenu - Five Nights at Tigers MEMORY LEAK.mp3-671119e40e032dcbd9e6ca6d0fb1f1d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
