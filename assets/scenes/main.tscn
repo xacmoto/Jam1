@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://6l0to5h4ud4t"]
+[gd_scene load_steps=2 format=3 uid="uid://6l0to5h4ud4t"]
+
+[ext_resource type="Script" uid="uid://kd65teis1h17" path="res://assets/scenes/office_1.gd" id="1_mr7gh"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Office1" type="Node" parent="."]
+script = ExtResource("1_mr7gh")
