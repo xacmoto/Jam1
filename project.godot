@@ -1,0 +1,9 @@
+config_version=5
+
+[application]
+
+config/name="Jam FiveNightsAtTigers MEMORY LEAK"
+config/description="ONe of the scariest
+"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
